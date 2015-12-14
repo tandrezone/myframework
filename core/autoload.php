@@ -1,4 +1,5 @@
 <?php
-  function __autoload($className){
-    echo $className;
-  }
+
+function __autoload($className){
+  include_once(ROOT.DS."packages".DS.$className.DS.$className.".php");
+}
