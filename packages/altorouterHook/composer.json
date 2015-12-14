@@ -2,7 +2,7 @@
    "name": "tandrezone/altorouterhook",
    "description": "Hooks for Routing using the match system of alto router",
    "keywords": ["router", "routing", "altorouter"],
-   "homepage": "",
+   "homepage": "https://github.com/tandrezone/altoRouterHook.git",
    "license": "MIT",
    "authors": [
       {
