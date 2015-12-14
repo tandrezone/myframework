@@ -1,3 +1,2 @@
 <?php
-define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', dirname(dirname(__FILE__)));
+include("/core/autoload.php");
