@@ -1,6 +1,6 @@
 <?php
 
-$router = new AltoRouter();
+$router = new Router();
 $router->map('GET|POST','/', 'home#index', 'home');
 $router->map('GET','/users/', array('c' => 'UserController', 'a' => 'ListAction'));
 $router->map('GET','/users/[i:id]', 'users#show', 'users_show');
