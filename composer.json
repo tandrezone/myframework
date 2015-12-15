@@ -3,6 +3,9 @@
       "vendor-dir": "packages"
   },
     "require": {
-        "altorouter/altorouter": "1.1.0"
-    }
+        "altorouter/altorouter": "1.1.0",
+        "moonlight/bdados": "dev-master",
+        "moonlight/router": "dev-master"
+    },
+    "minimum-stability": "dev"
 }

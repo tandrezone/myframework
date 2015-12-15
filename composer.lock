@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f84f721539be719596dbc080bc5fcec3",
-    "content-hash": "fdb55ab3a826cc81720434dd90eab926",
+    "hash": "84adba79009da0a7972e23bf1d2a6984",
+    "content-hash": "b01ff5f4784c98de7466da6dd87c8af7",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -57,12 +57,101 @@
                 "routing"
             ],
             "time": "2014-04-16 09:44:40"
+        },
+        {
+            "name": "moonlight/bdados",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/Bdados.git",
+                "reference": "3f1c186fa56003411fefb89c1453e2f18f75f8f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/Bdados/zipball/3f1c186fa56003411fefb89c1453e2f18f75f8f2",
+                "reference": "3f1c186fa56003411fefb89c1453e2f18f75f8f2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "BDadosPDO.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to access bd",
+            "homepage": "https://github.com/tandrezone/bdados",
+            "keywords": [
+                "bd",
+                "bdados",
+                "moonlight"
+            ],
+            "time": "2015-12-15 12:28:48"
+        },
+        {
+            "name": "moonlight/router",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/router.git",
+                "reference": "c370564fbb8b754ab5982040a54a99d7a56fdc43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/router/zipball/c370564fbb8b754ab5982040a54a99d7a56fdc43",
+                "reference": "c370564fbb8b754ab5982040a54a99d7a56fdc43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "router.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to routing",
+            "homepage": "https://github.com/tandrezone/router",
+            "keywords": [
+                "bd",
+                "bdados",
+                "moonlight"
+            ],
+            "time": "2015-12-15 12:52:10"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "moonlight/bdados": 20,
+        "moonlight/router": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
