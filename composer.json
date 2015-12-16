@@ -3,9 +3,12 @@
       "vendor-dir": "packages"
   },
     "require": {
-        "doctrine/orm": "dev-master",
+         "doctrine/orm": "2.4.*",
         "moonlight/router": "dev-master",
         "duncan3dc/blade": "^2.2"
+    },
+    "autoload": {
+      "psr-0": {"": "src/"}
     },
     "minimum-stability": "dev"
 }
