@@ -1,5 +1,4 @@
 <?php
-
 define ('DEVELOPMENT_ENVIRONMENT',true);
 define('DB_NAME', 'framework');
 define('DB_USER', 'root');
