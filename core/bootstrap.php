@@ -4,6 +4,10 @@ require_once "packages/autoload.php";
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
+use duncan3dc\Laravel\Blade;
+use duncan3dc\Laravel\BladeInstance;
+
+$blade = new BladeInstance("application/views", "tmp/cache/views");
 
 $paths = array("application\models");
 $isDevMode = false;
@@ -38,7 +42,7 @@ $function = $parts[1];
 if(file_exists("application/controllers/".$controller.".php")){
   include_once("application/controllers/".$controller.".php");
   if(class_exists($controller) ) {
-    $c = new $controller($entityManager);
+    $c = new $controller($entityManager, $blade);
     if(method_exists($c,$function)){
       $c->$function();
     } else {

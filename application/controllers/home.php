@@ -3,6 +3,6 @@ require("core/controller.php");
 
 class home extends controller{
   function index(){
-    echo "PRODUCTO INDEX";
+    echo $this->blade->render("index",array("nome"=>"Tiago"));
   }
 }
