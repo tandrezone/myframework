@@ -1,6 +1,6 @@
 <?php
 //DEBUG Mode
-if(DEVELOPMENT_ENVIRONMENT):
+
 	$router = new Router();
 	$router->map('GET|POST','/', 'home#index', 'home');
 	$router->map('GET','/api', 'brigdeOut', 'apiout');
@@ -22,6 +22,3 @@ if(DEVELOPMENT_ENVIRONMENT):
 	<h3>Try these requests: </h3>
 	<p><a href="<?php echo $router->generate('apiin'); ?>">GET <?php echo $router->generate('apiin'); ?></a></p>
 	<p><form action="<?php echo $router->generate('apiout', array('id' => 10, 'action' => 'update')); ?>" method="post"><button type="submit">POST <?php echo $router->generate('apiout', array('id' => 10, 'action' => 'update')); ?></button></form></p>
-<?php
-endif;
-?>
