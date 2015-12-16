@@ -2,7 +2,7 @@
 //DEBUG Mode
 
 	$router = new Router();
-	$router->map('GET|POST','/', 'home#index', 'home');
+	$router->map('GET|POST','/', 'home.index', 'home');
 	$router->map('GET','/api', 'brigdeOut', 'apiout');
 	$router->map('POST','/api', 'brigdeIn', 'apiin');
 
