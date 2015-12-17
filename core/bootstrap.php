@@ -24,8 +24,7 @@ $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 
 $router = new Router();
-$router->map('GET|POST','/', 'home', 'home');
-
+include_once("application/routing.php");
 $match = $router->match();
 
 if (strpos($match['target'], '.') !== FALSE)
