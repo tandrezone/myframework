@@ -7,9 +7,9 @@ use Doctrine\ORM\EntityManager;
 use duncan3dc\Laravel\Blade;
 use duncan3dc\Laravel\BladeInstance;
 
-$blade = new BladeInstance("application/views", "tmp/cache/views");
+$blade = new BladeInstance("app/views", "tmp/cache/views");
 
-$paths = array("application\models");
+$paths = array("app\models");
 $isDevMode = false;
 
 // the connection configuration
@@ -24,7 +24,7 @@ $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 
 $router = new Router();
-include_once("application/routing.php");
+include_once("app/routing.php");
 $match = $router->match();
 
 if (strpos($match['target'], '.') !== FALSE)
@@ -38,18 +38,18 @@ if (strpos($match['target'], '.') !== FALSE)
 $controller = $parts[0];
 $function = $parts[1];
 require "controller.php";
-if(file_exists("application/controllers/".$controller.".php")){
-  include_once("application/controllers/".$controller.".php");
+if(file_exists("app/controllers/".$controller.".php")){
+  include_once("app/controllers/".$controller.".php");
   if(class_exists($controller) ) {
     $c = new $controller($entityManager, $blade);
     if(method_exists($c,$function)){
       $c->$function();
     } else {
-      echo "Metodo ".$function. "não existe, deve ser criado dentro da classe ".$controller;
+      echo "Metodo ".$function. "n&atilde;o existe, deve ser criado dentro da classe ".$controller;
     }
   } else{
-    echo "Classe do controlador ".$controller." não existe deve ser criada dentro do ficheiro ".$controller.".php";
+    echo "Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php";
   }
 } else {
-  echo "Ficheiro de controlador ".$controller." não existe por favor criar o ficheiro e colocar em /applications/controllers";
+  echo "Ficheiro de controlador ".$controller." n&atilde;o existe por favor criar o ficheiro e colocar em /applications/controllers";
 }
