@@ -1,13 +1,15 @@
 <?php
 /**
- * @Entity @Table(name="{{name}}")
+ * @Entity @Table(name="users")
  **/
-class {{name}}
+class user
 {
   /** @Id @Column(type="integer") @GeneratedValue **/
   protected $id;
   /** @Column(type="string") **/
   protected $name;
+  /** @Column(type="string") **/
+  protected $password;
 
 /**
  * [getId]
@@ -34,5 +36,13 @@ class {{name}}
   public function setName($name)
   {
     $this->name = $name;
+  }
+
+  public function getPassword(){
+    return $this->password;
+  }
+
+  public function setPassword($password){
+    $this->password = $password;
   }
 }

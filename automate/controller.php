@@ -16,8 +16,12 @@ class {{name}} extends controller{
  * [Run when we came to /{{name}}/new]
  * @return [View]
  */
-  function new(){
-
+  function create(){
+    ${{name}} = new user();
+    ${{name}}->setName("test");
+    ${{name}}->em->persist($user);
+    ${{name}}->em->flush();
+    echo "Created Product with ID " . ${{name}}->getId() . "\n";
   }
 /**
  * [Run when we came to /{{name}}/update/id]
