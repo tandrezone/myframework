@@ -38,15 +38,16 @@ if (strpos($match['target'], '.') !== FALSE)
 $controller = $parts[0];
 $function = $parts[1];
 require "controller.php";
+require "model.php";
 if($controller != ''){
   if(file_exists("app/controllers/".$controller.".php")){
     include_once("app/controllers/".$controller.".php");
     if(class_exists($controller) ) {
       $c = new $controller($entityManager, $blade);
       if(method_exists($c,$function)){
-        $c->$function($match['params']);
+        echo $c->$function($match['params']);
       } else {
-        error::set("Metodo ".$function. "n&atilde;o existe, deve ser criado dentro da classe ".$controller);
+        error::set("Metodo <b>".$function. "</b> n&atilde;o existe, deve ser criado dentro da classe <b>".$controller."</b>");
       }
     } else{
       error::set("Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php");

@@ -1,8 +1,8 @@
 <?php
 /**
- * @Entity @Table(name="{{name}}")
+ * @Entity @Table(name="{{name}}s")
  **/
-class {{name}}
+class {{name}} extends model
 {
   /** @Id @Column(type="integer") @GeneratedValue **/
   protected $id;
