@@ -1,14 +1,18 @@
 <?php
 // bootstrap.php
 require_once "/config/config.php";
-require_once "packages/autoload.php";
 require_once "errors.php";
+if(file_exists("packages/autoload.php")){
+  require_once "packages/autoload.php";
+} else {
+  error::set("Composer n&atilde;o encontrado, fa&ccedil;a o favor de correr o comando <b>composer update</b>");
+  exit;
+}
+
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
-use duncan3dc\Laravel\Blade;
-use duncan3dc\Laravel\BladeInstance;
 
-$blade = new BladeInstance("app/views", "tmp/cache/views");
 
 $paths = array("app\models");
 $isDevMode = false;

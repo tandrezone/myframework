@@ -4,9 +4,7 @@
   },
     "require": {
          "doctrine/orm": "2.4.*",
-        "moonlight/router": "dev-master",
-        "duncan3dc/blade": "^2.2",
-    "simple-crud/simple-crud": "^5.4"
+         "moonlight/router": "dev-master"
     },
     "autoload": {
       "psr-0": {"": "src/"}
