@@ -37,7 +37,7 @@ if (strpos($match['target'], '.') !== FALSE)
 
 $controller = $parts[0];
 $function = $parts[1];
-
+require "controller.php";
 if(file_exists("application/controllers/".$controller.".php")){
   include_once("application/controllers/".$controller.".php");
   if(class_exists($controller) ) {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb4321463c823b701ba24cf7e93e441c",
-    "content-hash": "7e5bcf06e6c41a10f2a00bb24efc1375",
+    "hash": "546d1e13124105b30e4ce04c84e99201",
+    "content-hash": "03ca34050aa27dfab4dabae3db1a258f",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -141,7 +141,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/fb8eaa0b612b543d10f09df8eb16b47dd976e97a",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/bc23e0f46da064cbc53c1b1243472477487ef754",
                 "reference": "fb8eaa0b612b543d10f09df8eb16b47dd976e97a",
                 "shasum": ""
             },
@@ -961,7 +961,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/a2e1de660e7de1877c350ec6a93bf4e525ea407f",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/1767e82edce74450f3d8b57bea5e7d0890ce35cf",
                 "reference": "a2e1de660e7de1877c350ec6a93bf4e525ea407f",
                 "shasum": ""
             },
@@ -1144,6 +1144,50 @@
                 "moonlight"
             ],
             "time": "2015-12-15 12:52:10"
+        },
+        {
+            "name": "simple-crud/simple-crud",
+            "version": "v5.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/simple-crud.git",
+                "reference": "ffc17962b7a1b4c255952c910c1404a1723635a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/simple-crud/zipball/ffc17962b7a1b4c255952c910c1404a1723635a2",
+                "reference": "ffc17962b7a1b4c255952c910c1404a1723635a2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleCrud\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create/Read/Update/Delete easily",
+            "homepage": "https://github.com/oscarotero/simple-crud",
+            "keywords": [
+                "crud",
+                "mysql",
+                "sqlite"
+            ],
+            "time": "2015-12-19 11:26:56"
         },
         {
             "name": "symfony/console",
