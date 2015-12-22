@@ -1,7 +1,11 @@
 <?php
+/**
+ * Include model into controller
+ */
 include_once("app/models/{{name}}.php");
 /**
  * This is the controller {{name}}
+ * ControllerBase is the parent and have all the dependency injection
  */
 class {{name}}s extends controller{
 
@@ -29,10 +33,10 @@ class {{name}}s extends controller{
     ${{name}}->em->flush();
     echo "Created Product with ID " . ${{name}}->getId() . "\n";
   }
-/**
- * [Run when we came to /{{name}}/update/id]
- * @return [View]
- */
+  /**
+   * [Run when we came to /{{name}}/update/id]
+   * @return [View]
+   */
   function update($params){
     $id = $params['id'];
     $newName = $_POST['name'];
@@ -48,6 +52,7 @@ class {{name}}s extends controller{
 
   /**
    * [Run when we came to /{{name}}/delete/id]
+   * @param  [Array] $params [id]
    * @return [View]
    */
   function delete($params){
@@ -62,6 +67,11 @@ class {{name}}s extends controller{
     $this->em->flush();
   }
 
+  /**
+   * [Run when we came to /{{name}}/id]
+   * @param  [Array] $params [id]
+   * @return [VIEW]         [String with text to display]
+   */
   function show($params){
     $id = $params['id'];
     ${{name}} = $this->em->find('{{name}}', $id);
