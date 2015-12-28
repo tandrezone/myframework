@@ -5,7 +5,25 @@ require_once "errors.php";
 if(file_exists("packages/autoload.php")){
   require_once "packages/autoload.php";
 } else {
-  error::set("Composer n&atilde;o encontrado, fa&ccedil;a o favor de correr o comando <b>php init.php</b>");
+  error::set("Composer n&atilde;o encontrado</br></br>");
+  error::set("Lista de Server packages a instalar:</br></br>");
+  $x = file_get_contents("composer.json");
+  $y = json_decode($x);
+  $z = $y->require;
+  foreach ($z as $name => $ver) {
+    error::set("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
+  }
+  error::set("</br>Para editar a lista de server packages a instalar basta editar o ficheiro <b>composer.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
+  error::set("</br></br>Lista de Client packages a instalar:</br></br>");
+  $x = file_get_contents("automate.json");
+  $y = json_decode($x);
+  $z = $y->require;
+  foreach ($z as $name => $ver) {
+    error::set("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
+  }
+  error::set("</br>Para editar a lista de client packages a instalar basta editar o ficheiro <b>automate.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
+
+  error::set("</br>Para instalar automaticamente os pacotes em falta basta correr a partir da linha de comandos <b>php init.php</b></br>");
   exit;
 }
 
