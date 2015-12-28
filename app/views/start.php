@@ -20,6 +20,7 @@
   <body>
     <h1>SUCCESS!</h1>
     <h2>Intalled with success, now you can start developing your application!</h2>
+    <h4>The starting point of your app is the file routing.php in /app/routing.php this file have the rules of routing for example in the route <b>/</b> (www.examplesite.com<b>/</b>) go to the controller start and run the method index</h4>
     <script src="public/js/jquery.js"></script>
     <script src="public/js/bootstrap.js"></script>
     <script src="public/js/angularjs.js"></script>
