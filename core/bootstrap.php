@@ -5,7 +5,7 @@ require_once "errors.php";
 if(file_exists("packages/autoload.php")){
   require_once "packages/autoload.php";
 } else {
-  error::set("Composer n&atilde;o encontrado, fa&ccedil;a o favor de correr o comando <b>composer update</b>");
+  error::set("Composer n&atilde;o encontrado, fa&ccedil;a o favor de correr o comando <b>php init.php</b>");
   exit;
 }
 

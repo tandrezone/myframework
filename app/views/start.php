@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>success</title>
 
     <!-- Bootstrap -->
     <link href="public/css/bootstrap.css" rel="stylesheet">
@@ -18,10 +18,8 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <h1>Hello {{name}}</h1>
-    <h1>Idade: {{age}}</h1>
-
+    <h1>SUCCESS!</h1>
+    <h2>Intalled with success, now you can start developing your application!</h2>
     <script src="public/js/jquery.js"></script>
     <script src="public/js/bootstrap.js"></script>
     <script src="public/js/angularjs.js"></script>
