@@ -5,7 +5,8 @@
     "require": {
          "doctrine/orm": "2.4.*",
          "moonlight/router": "dev-master",
-         "moonlight/automate": "dev-master"
+         "moonlight/automate": "dev-master",
+         "knplabs/packagist-api" : "dev-master"
     },
     "autoload": {
       "psr-0": {"": "src/"}
