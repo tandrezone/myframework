@@ -1,3 +1,6 @@
 packages/
 composer.lock
 tmp/cache/views
+tmp/cache
+public/css
+public/js
