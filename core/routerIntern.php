@@ -11,9 +11,11 @@ class routerIntern{
    * @return [type]           [description]
    */
   static function run($routfile, $prefix, $router){
+    $rp = explode("/", $routfile);
+    $appName = $rp[count($rp)-2].".";
     include_once($routfile);
     //no ficheiro tem de existir uma closure chamada $intRoute
-    call_user_func_array($intRoute, array($router, $prefix));
+    call_user_func_array($intRoute, array($router, $prefix, $appName));
   }
 }
  ?>

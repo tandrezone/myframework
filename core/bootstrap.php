@@ -4,6 +4,7 @@ require_once "/config/config.php";
 require_once "errors.php";
 
 require_once "/core/me.php";
+$_SESSION['APPNAME'] = "";
 $me = new me("10");
 $me->setLevel("10");
 if(file_exists("packages/autoload.php")){
@@ -52,29 +53,32 @@ $entityManager = EntityManager::create($dbParams, $config);
 
 $router = new Router();
 include_once(ROUTEBASE);
+
 $match = $router->match();
 if (strpos($match['target'], '.') !== FALSE)
 {
     $parts = explode(".", $match['target']);
 } else {
-  $parts[0] = $match['target'];
-  $parts[1] = "index";
+  $parts[0] = "";
+  $parts[1] = $match['target'];
+  $parts[2] = "index";
 }
 //echo "<pre>";
 //print_r($match);
 //echo "</pre>";
-$controller = $parts[0];
-$function = $parts[1];
+$appname = $parts[0];
+$controller = $parts[1];
+$function = $parts[2];
 require "controller.php";
 require "model.php";
 if($match['package'] == ""){
-  $pathForApp = "app/".APPNAME."/controllers/";
+  $pathForApp = "app/".$appname."/controllers/";
 } else {
   $pathForApp = "packages/".$match['package']."/";
 }
   if($controller != ''){
     $pathforcontroller = $pathForApp.$controller.".php";
-    //echo $pathforcontroller;
+    echo $pathforcontroller;
     if(file_exists($pathforcontroller)){
       include_once($pathforcontroller);
       if(class_exists($controller) ) {

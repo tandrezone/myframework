@@ -56,7 +56,6 @@ Lista de componentes:
     define('DB_USER', 'root');                        username usado na base de dados
     define('DB_PASSWORD', 'root');                    password usada na base de dados
     define('DB_HOST', 'localhost');                   host usado na base de dados
-    define('APPNAME', 'firstApp');                    nome da app
     define('ROUTEBASE', '/app/routing.php');          local onde se encontra o ficheiro inicial de routing
 
   core/bootstrap.php

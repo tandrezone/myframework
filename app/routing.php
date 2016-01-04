@@ -7,6 +7,7 @@
 //Run routing from app without prefix
 include_once("/core/routerIntern.php");
 //init the closure with the prefix empty
-routerIntern::run('/app/firstApp/routing.php','', $router);
+routerIntern::run('/app/firstApp/routing.php','fa', $router);
+routerIntern::run('/app/secondApp/routing.php','sa', $router);
 //init the closure with the prefix auth
 routerIntern::run('/packages/moonlight/auth/routing.php','auth', $router);
