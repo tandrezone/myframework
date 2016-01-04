@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5bc92345341e6f3258997a269abf1780",
-    "content-hash": "ba03c4c2689469977785e9958348ac63",
+    "hash": "ee3b18b8f4ab50babe4a138b4f0bf6ab",
+    "content-hash": "c59d07d3fd9f186219136d4a3f94af0f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -81,12 +81,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "619c3d4910205255c6cc637adb97fec16eaca532"
+                "reference": "74b63b05ea5a243efa877d3904bc7d441750b255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/619c3d4910205255c6cc637adb97fec16eaca532",
-                "reference": "619c3d4910205255c6cc637adb97fec16eaca532",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/74b63b05ea5a243efa877d3904bc7d441750b255",
+                "reference": "74b63b05ea5a243efa877d3904bc7d441750b255",
                 "shasum": ""
             },
             "require": {
@@ -97,13 +97,12 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8|~5.0",
-                "predis/predis": "~1.0",
-                "satooshi/php-coveralls": "~0.6"
+                "predis/predis": "~1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -143,7 +142,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-12-25 12:33:13"
+            "time": "2015-12-31 18:00:15"
         },
         {
             "name": "doctrine/collections",
@@ -290,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "de6c0bd243d058eb9f086144a6fed9d435737c78"
+                "reference": "93d46e7cb48fb271376aebb17d9eec8813a81e03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/de6c0bd243d058eb9f086144a6fed9d435737c78",
-                "reference": "de6c0bd243d058eb9f086144a6fed9d435737c78",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/93d46e7cb48fb271376aebb17d9eec8813a81e03",
+                "reference": "93d46e7cb48fb271376aebb17d9eec8813a81e03",
                 "shasum": ""
             },
             "require": {
@@ -353,7 +352,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-12-15 18:16:51"
+            "time": "2015-12-31 13:45:04"
         },
         {
             "name": "doctrine/inflector",
@@ -697,6 +696,44 @@
             "time": "2015-11-26 20:35:00"
         },
         {
+            "name": "moonlight/auth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/auth.git",
+                "reference": "9b51571b41e79acb8f6e13d6010c2b5faff4fcf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/auth/zipball/9b51571b41e79acb8f6e13d6010c2b5faff4fcf4",
+                "reference": "9b51571b41e79acb8f6e13d6010c2b5faff4fcf4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to auth",
+            "homepage": "https://github.com/tandrezone/auth",
+            "keywords": [
+                "auth",
+                "bd",
+                "moonlight"
+            ],
+            "time": "2016-01-04 17:11:51"
+        },
+        {
             "name": "moonlight/automate",
             "version": "dev-master",
             "source": {
@@ -740,12 +777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tandrezone/router.git",
-                "reference": "c370564fbb8b754ab5982040a54a99d7a56fdc43"
+                "reference": "04c15ca2c0217124952d9f22de39a9f7f986ab3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tandrezone/router/zipball/c370564fbb8b754ab5982040a54a99d7a56fdc43",
-                "reference": "c370564fbb8b754ab5982040a54a99d7a56fdc43",
+                "url": "https://api.github.com/repos/tandrezone/router/zipball/04c15ca2c0217124952d9f22de39a9f7f986ab3d",
+                "reference": "04c15ca2c0217124952d9f22de39a9f7f986ab3d",
                 "shasum": ""
             },
             "require": {
@@ -775,7 +812,7 @@
                 "bdados",
                 "moonlight"
             ],
-            "time": "2015-12-15 12:52:10"
+            "time": "2016-01-04 16:45:54"
         },
         {
             "name": "symfony/console",
@@ -783,12 +820,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "4e83844dead78e6e90b8b7dff862fa232fa228ad"
+                "reference": "8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/4e83844dead78e6e90b8b7dff862fa232fa228ad",
-                "reference": "4e83844dead78e6e90b8b7dff862fa232fa228ad",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa",
+                "reference": "8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +872,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-12-28 13:12:56"
+            "time": "2016-01-03 15:33:41"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -843,12 +880,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc"
+                "reference": "475b620e39d5ba913961f63931823a7914cdaa80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a5eb815363c0388e83247e7e9853e5dbc14999cc",
-                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/475b620e39d5ba913961f63931823a7914cdaa80",
+                "reference": "475b620e39d5ba913961f63931823a7914cdaa80",
                 "shasum": ""
             },
             "require": {
@@ -895,7 +932,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-30 20:15:42"
+            "time": "2016-01-03 15:33:41"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -903,12 +940,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "49ff736bd5d41f45240cec77b44967d76e0c3d25"
+                "reference": "c9206b4e785f1b3bf2948ccfafc6620831c69922"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/49ff736bd5d41f45240cec77b44967d76e0c3d25",
-                "reference": "49ff736bd5d41f45240cec77b44967d76e0c3d25",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c9206b4e785f1b3bf2948ccfafc6620831c69922",
+                "reference": "c9206b4e785f1b3bf2948ccfafc6620831c69922",
                 "shasum": ""
             },
             "require": {
@@ -954,7 +991,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2015-11-20 09:19:13"
+            "time": "2016-01-01 11:06:21"
         },
         {
             "name": "xiaoler/blade",
@@ -1003,6 +1040,7 @@
     "stability-flags": {
         "moonlight/router": 20,
         "moonlight/automate": 20,
+        "moonlight/auth": 20,
         "knplabs/packagist-api": 20
     },
     "prefer-stable": false,
