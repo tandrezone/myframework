@@ -1,4 +1,17 @@
 Framework
+
+Instalação:
+  Para instalar os componentes basta executar o comando php init.php
+  Para editar os componentes server antes de executar o comando php init.php abrir o ficheiro composer.json e editar o campo requires
+  Para editar os componentes server antes de executar o comando php init.php abrir o ficheiro automate.json e editar o campo requires
+
+Objectivo:
+  O objectivo desta framework é criar um sistema baseado em packages e multiapps facil de utilizar e preparado para a cloud.
+  As packages sao criadas e organizadas em MVC, podem ou não ter ficheiro de routing e possuem todo o codigo que possa ser reutilizado
+  Qualquer codigo que seja especifico da aplicação e não possa ser reutilizado é colocado na pasta app/nome_APP
+  O outro objectivo é ser multiapp, podendo correr varias apps dentro da mesma framwork, com isto torna-se mais simples manter tudo upp to date e manter em mente sempre a reutilização.
+  Da mesma maneira é possivel usar apenas uma base de dados para todas as apps, e até mesmo poder usar tabelas partilhadas entre as varias apps
+
 Lista de componentes:
   moonlight/router
   moonlight/auth
@@ -74,5 +87,3 @@ Lista de componentes:
 
   tmp/sessions
     Ficheiros temporarios de sessao
-
-    
