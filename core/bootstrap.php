@@ -36,12 +36,12 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 
-$paths = array("packages\moonlight\auth\models");
-$isDevMode = false;
+$paths = array("\packages\moonlight\auth\models","\app\firstApp\models");
+$isDevMode = DEV_MODE;
 
 // the connection configuration
 $dbParams = array(
-    'driver'   => 'pdo_mysql',
+    'driver'   => DB_DRIVER,
     'user'     => DB_USER,
     'password' => DB_PASSWORD,
     'dbname'   => DB_NAME,
