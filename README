@@ -1,0 +1,78 @@
+Framework
+Lista de componentes:
+  moonlight/router
+  moonlight/auth
+  moonlight/automate
+  doctrine/doctrine
+  xialoer/blade
+
+
+  moonlight/router
+    Package destinada a fazer routing
+    De momento a funçao map usa a seguinte assinatura
+    /**
+     * [map Usada para executar as funcoes routing]
+     * @param  {[String]} $method             [methodo, pode ser GET, POST, etc]
+     * @param  {[String]} $route              [route /route route a ser mapeada]
+     * @param  {[String]} $target             [funcao a ser executada caso seja string home ele corre automaticamente a funcao index, normalmente este target deve ser nome_controlador.funcao]
+     * @param  {[String]} $package            =             ""   [Package, indica se a funcao a ser executada se encontra dentro das packages, caso esteja vazio ele procura  na app se nao for vazio, procura dentro da package nomeada]
+     * @param  {[String]} $midleware="access" [Midleware, função de permissao, esta função, dentro do controlador a ser usado é executada antes do target, caso esta funcao retorne false o target nao é executado]
+     * @param  {[String]} $name               =             null [Nome que pode ser atribuido á route]
+     */
+    public function map($method, $route, $target, $package = "", $midleware="access", $name = null)
+
+  moonlight/auth
+    Esta package não esta terminada,
+    Esta package destina-se a fazer uma authorizaçao  basica de modo a poder ser usada como midleware
+    Cria um user simples e as funcoes de login, logout, registo e verificaçao
+
+  moonlight/automate
+    Package template e automação
+    Esta package tanto pode ser usada para instalar componentes do lado do cliente jquery, angularjs, bootstrap, etc como pode ser usada para criar base file,
+    por exemplo um template basico de controlador ou de modelo.
+
+  doctrine/doctrine
+    ORML usada nesta framework
+
+  xialoer/blade
+    Template engine usada
+
+  config/config.php
+    define ('DEVELOPMENT_ENVIRONMENT',true);          define se estamos em modo de desenvolvimento
+    define('DB_NAME', 'framework');                   nome da base de dados usada
+    define('DB_USER', 'root');                        username usado na base de dados
+    define('DB_PASSWORD', 'root');                    password usada na base de dados
+    define('DB_HOST', 'localhost');                   host usado na base de dados
+    define('APPNAME', 'firstApp');                    nome da app
+    define('ROUTEBASE', '/app/routing.php');          local onde se encontra o ficheiro inicial de routing
+
+  core/bootstrap.php
+    Ficheiro usado para carregar o sistema, corre os ficheiros de init, cria os objectos de accesso à base de dados, de controlo do router, e os ficheiros core
+
+  core/controller.php
+    Controlador core - Este é o controlador que contem todas as definiçoes que sao herdadas por todos os controladores criados, contém 3 propriedades, a $em, a $blade e a $accessList e duas funções a access e o constructor
+    No construtor é feita dependency injection é injectado a ORML doctrine a a template engine blade
+    Na access que é o midleware defaut da nossa app é criada a accessList que é uma lista onde se encontram os pares funcaoNome => nivel_de_Acessp
+
+  core/errors.php
+    Classe destinada a listar errors
+
+  core/model.php
+    Class base dos modelos, de momento so possui uma funçao que é a serialize para transformar os modelos em objectos json.
+
+  public/css
+    Ficheiros de estilo de accesso publico
+
+  public/js
+    Ficheiros script de accesso publico
+
+  tmp/cache
+    Cache temporaria
+
+  tmp/logs
+    Logs temporarios
+
+  tmp/sessions
+    Ficheiros temporarios de sessao
+
+    
