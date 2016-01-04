@@ -1,7 +1,7 @@
 <?php
 /**
- * This is the routing file, is the starting point of the app in this example we say that when the user go to the page / we load a controller called start.php that is in
- * /app/controllers/start.php and run a function called index
+ * The local of this file is setted in the config file
+ * This file can run route matches or can include another route file
+ * For example i can run a route inside my app or inside packages
  */
-$router->map('GET','/', 'start.index', 'start_index');
- ?>
+include_once("firstApp/routing.php");

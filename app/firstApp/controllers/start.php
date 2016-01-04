@@ -15,6 +15,6 @@ class start extends controller{
    * @return [View] All the controller routing functions  returns a view, a view is a template with need to know vars
    */
   function index(){
-    return $this->view->make('start', ['name' => 'tiago', 'age' => '27'])->render();
+    return "index dentro da app firstApp";
   }
 }

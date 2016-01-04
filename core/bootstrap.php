@@ -2,6 +2,10 @@
 // bootstrap.php
 require_once "/config/config.php";
 require_once "errors.php";
+
+require_once "/core/me.php";
+$me = new user("10");
+$me->setLevel("10");
 if(file_exists("packages/autoload.php")){
   require_once "packages/autoload.php";
 } else {
@@ -47,7 +51,7 @@ $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 
 $router = new Router();
-include_once("app/routing.php");
+include_once(ROUTEBASE);
 $match = $router->match();
 if (strpos($match['target'], '.') !== FALSE)
 {
@@ -61,22 +65,36 @@ $controller = $parts[0];
 $function = $parts[1];
 require "controller.php";
 require "model.php";
-if($controller != ''){
-  if(file_exists("app/controllers/".$controller.".php")){
-    include_once("app/controllers/".$controller.".php");
-    if(class_exists($controller) ) {
-      $c = new $controller($entityManager, $blade);
-      if(method_exists($c,$function)){
-        echo $c->$function($match['params']);
-      } else {
-        error::set("Metodo <b>".$function. "</b> n&atilde;o existe, deve ser criado dentro da classe <b>".$controller."</b>");
+if($match['package'] == ""){
+  $pathForApp = "app/".APPNAME."/controllers/";
+} else {
+  $pathForApp = "packages/".$match['package']."/";
+}
+  if($controller != ''){
+    $pathforcontroller = $pathForApp.$controller.".php";
+    if(file_exists($pathforcontroller)){
+      include_once($pathforcontroller);
+      if(class_exists($controller) ) {
+        $c = new $controller($entityManager, $blade);
+        if(method_exists($c,$function)){
+          $midleware = $match['midleware'];
+          if(method_exists($c,$midleware)){
+            $midlewareVerification =$c->$midleware($function, $me);
+            if($midlewareVerification){
+              echo $c->$function($match['params']);
+            } else {
+              echo "O midleware de acesso a esta route n&atilde;o autorizou o seu accesso";
+            }
+          }
+        } else {
+          error::set("Metodo <b>".$function. "</b> n&atilde;o existe, deve ser criado dentro da classe <b>".$controller."</b>");
+        }
+      } else{
+        error::set("Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php");
       }
-    } else{
-      error::set("Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php");
+    } else {
+      error::set("Ficheiro de controlador ".$controller." n&atilde;o existe por favor criar o ficheiro e colocar em /applications/controllers");
     }
   } else {
-    error::set("Ficheiro de controlador ".$controller." n&atilde;o existe por favor criar o ficheiro e colocar em /applications/controllers");
+    error::set("ROUTE nao existe");
   }
-} else {
-  error::set("ROUTE nao existe");
-}
