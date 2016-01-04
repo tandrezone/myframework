@@ -4,4 +4,8 @@
  * This file can run route matches or can include another route file
  * For example i can run a route inside my app or inside packages
  */
-include_once("firstApp/routing.php");
+setRouteFile("auth","packages/moonlight/auth/routing.php", $router);
+
+function setRouteFile($base, $link, $router) {
+  include_once($link);
+}

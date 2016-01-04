@@ -4,7 +4,7 @@ require_once "/config/config.php";
 require_once "errors.php";
 
 require_once "/core/me.php";
-$me = new user("10");
+$me = new me("10");
 $me->setLevel("10");
 if(file_exists("packages/autoload.php")){
   require_once "packages/autoload.php";
@@ -36,7 +36,7 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 
-$paths = array("app\models");
+$paths = array("packages\moonlight\auth\models");
 $isDevMode = false;
 
 // the connection configuration
@@ -60,7 +60,9 @@ if (strpos($match['target'], '.') !== FALSE)
   $parts[0] = $match['target'];
   $parts[1] = "index";
 }
-
+//echo "<pre>";
+//print_r($match);
+//echo "</pre>";
 $controller = $parts[0];
 $function = $parts[1];
 require "controller.php";
@@ -72,6 +74,7 @@ if($match['package'] == ""){
 }
   if($controller != ''){
     $pathforcontroller = $pathForApp.$controller.".php";
+    //echo $pathforcontroller;
     if(file_exists($pathforcontroller)){
       include_once($pathforcontroller);
       if(class_exists($controller) ) {
