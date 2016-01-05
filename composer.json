@@ -7,6 +7,7 @@
          "moonlight/router": "dev-master",
          "moonlight/automate": "dev-master",
           "moonlight/auth": "dev-master",
+          "moonlight/backoffice": "dev-master",
          "knplabs/packagist-api" : "dev-master",
     "xiaoler/blade": "^0.2.2"
     },

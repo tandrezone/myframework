@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ee3b18b8f4ab50babe4a138b4f0bf6ab",
-    "content-hash": "c59d07d3fd9f186219136d4a3f94af0f",
+    "hash": "abbc5adae9f60c100becf10349631871",
+    "content-hash": "879eb6a37537b5420f40013afd21e31c",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -701,12 +701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tandrezone/auth.git",
-                "reference": "9b51571b41e79acb8f6e13d6010c2b5faff4fcf4"
+                "reference": "149a1661473d8f4b26f06edf971bd7dba2798d6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tandrezone/auth/zipball/9b51571b41e79acb8f6e13d6010c2b5faff4fcf4",
-                "reference": "9b51571b41e79acb8f6e13d6010c2b5faff4fcf4",
+                "url": "https://api.github.com/repos/tandrezone/auth/zipball/149a1661473d8f4b26f06edf971bd7dba2798d6a",
+                "reference": "149a1661473d8f4b26f06edf971bd7dba2798d6a",
                 "shasum": ""
             },
             "require": {
@@ -731,7 +731,7 @@
                 "bd",
                 "moonlight"
             ],
-            "time": "2016-01-04 17:11:51"
+            "time": "2016-01-05 16:07:21"
         },
         {
             "name": "moonlight/automate",
@@ -770,6 +770,44 @@
                 "moonlight"
             ],
             "time": "2015-12-28 16:52:43"
+        },
+        {
+            "name": "moonlight/backoffice",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/backoffice.git",
+                "reference": "89b9c815593318a3facf7fcfc46fbd292fb391b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/backoffice/zipball/89b9c815593318a3facf7fcfc46fbd292fb391b2",
+                "reference": "89b9c815593318a3facf7fcfc46fbd292fb391b2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to backoffice",
+            "homepage": "https://github.com/tandrezone/backoffice",
+            "keywords": [
+                "backoffice",
+                "bd",
+                "moonlight"
+            ],
+            "time": "2016-01-05 16:07:31"
         },
         {
             "name": "moonlight/router",
@@ -1041,6 +1079,7 @@
         "moonlight/router": 20,
         "moonlight/automate": 20,
         "moonlight/auth": 20,
+        "moonlight/backoffice": 20,
         "knplabs/packagist-api": 20
     },
     "prefer-stable": false,
