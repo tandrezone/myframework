@@ -5,7 +5,7 @@
  * For example i can run a route inside my app or inside packages
  */
 //Run routing from app without prefix
-include_once("/core/routerIntern.php");
+include_once("/core/routerIntern.class.php");
 //init the closure with the prefix fa
 //This code is needed and you should not delete or modify
 routerIntern::run('/app/'.$appname.'/routing.php','', $router);

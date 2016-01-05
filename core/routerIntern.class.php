@@ -1,8 +1,9 @@
 <?php
+include_once 'routerIntern.interface.php';
 /**
  * Run a routerIntern
  */
-class routerIntern{
+class routerIntern implements routerInterface{
   /**
    * Run a internal router
    * @param  [String] $routfile [Ficheiro onde esta o ficheiro de routing a ser executado]

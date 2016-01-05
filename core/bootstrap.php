@@ -1,7 +1,7 @@
 <?php
 // bootstrap.php
 require_once "/config/config.php";
-require_once "errors.php";
+require_once "errors.class.php";
 
 require_once "/core/me.php";
 if($_SERVER['SERVER_NAME'] == "firstapp.dev"){
@@ -73,8 +73,8 @@ if (strpos($match['target'], '.') !== FALSE)
 //echo "</pre>";
 $controller = $parts[0];
 $function = $parts[1];
-require "controller.php";
-require "model.php";
+require "controller.class.php";
+require "model.class.php";
 if($match['package'] == ""){
   $pathForApp = "app/".$appname."/controllers/";
 } else {

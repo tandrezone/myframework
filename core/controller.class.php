@@ -1,6 +1,7 @@
 <?php
+include_once 'controller.interface.php';
 use Doctrine\ORM\EntityManager;
-class controller{
+class controller implements controllerInterface{
   protected $em;
   protected $view;
   protected $accessList;
