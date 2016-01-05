@@ -10,9 +10,9 @@ class controller implements controllerInterface{
  *    "em" = @Inject("doctrine.orm.entity_manager")
  * })
  */
-  public function __construct(EntityManager $em)
+  public function __construct(EntityManager $em, $path)
   {
-    $path = ['app/views'];         // your view file path, it's an array
+    $path = [$path.'/views'];         // your view file path, it's an array
     $cachePath = 'tmp/cache';     // compiled file path
 
     $compiler = new \Xiaoler\Blade\Compilers\BladeCompiler($cachePath);

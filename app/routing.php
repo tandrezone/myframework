@@ -18,4 +18,4 @@ routerIntern::run('/app/'.$appname.'/routing.php','', $router);
 // if you need to access stuff from another app then that stuff is aproved to be a package
 // in the app i canot access another apps
 // in the app i have full access to packages
-routerIntern::runpackage('moonlight/backoffice','backoffice',$router);
+routerIntern::runpackage('moonlight/auth','auth',$router);

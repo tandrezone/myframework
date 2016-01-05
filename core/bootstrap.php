@@ -1,4 +1,5 @@
 <?php
+session_start();
 // bootstrap.php
 require_once "/config/config.php";
 require_once "errors.class.php";
@@ -60,6 +61,7 @@ $entityManager = EntityManager::create($dbParams, $config);
 $router = new Router();
 include_once(ROUTEBASE);
 
+
 $match = $router->match();
 if (strpos($match['target'], '.') !== FALSE)
 {
@@ -76,17 +78,19 @@ $function = $parts[1];
 require "controller.class.php";
 require "model.class.php";
 if($match['package'] == ""){
-  $pathForApp = "app/".$appname."/controllers/";
+  $pathForApp = "app/".$appname."";
 } else {
-  $pathForApp = "packages/".$match['package']."/controllers/";
+  $pathForApp = "packages/".$match['package']."";
 }
+
+
   if($controller != ''){
-    $pathforcontroller = $pathForApp.$controller.".php";
+    $pathforcontroller = $pathForApp."/controllers/".$controller.".php";
     //echo $pathforcontroller;
     if(file_exists($pathforcontroller)){
       include_once($pathforcontroller);
       if(class_exists($controller) ) {
-        $c = new $controller($entityManager, $blade);
+        $c = new $controller($entityManager, $pathForApp);
         if(method_exists($c,$function)){
           $midleware = $match['midleware'];
           if(method_exists($c,$midleware)){
