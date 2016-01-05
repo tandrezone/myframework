@@ -4,6 +4,12 @@ require_once "/config/config.php";
 require_once "errors.php";
 
 require_once "/core/me.php";
+if($_SERVER['SERVER_NAME'] == "firstapp.dev"){
+  $appname = "firstapp";
+}
+else if($_SERVER['SERVER_NAME'] == "secondapp.dev"){
+  $appname = "secondapp";
+}
 $_SESSION['APPNAME'] = "";
 $me = new me("10");
 $me->setLevel("10");
@@ -59,26 +65,24 @@ if (strpos($match['target'], '.') !== FALSE)
 {
     $parts = explode(".", $match['target']);
 } else {
-  $parts[0] = "";
-  $parts[1] = $match['target'];
-  $parts[2] = "index";
+  $parts[0] = $match['target'];
+  $parts[1] = "index";
 }
 //echo "<pre>";
 //print_r($match);
 //echo "</pre>";
-$appname = $parts[0];
-$controller = $parts[1];
-$function = $parts[2];
+$controller = $parts[0];
+$function = $parts[1];
 require "controller.php";
 require "model.php";
 if($match['package'] == ""){
   $pathForApp = "app/".$appname."/controllers/";
 } else {
-  $pathForApp = "packages/".$match['package']."/";
+  $pathForApp = "packages/".$match['package']."/controllers/";
 }
   if($controller != ''){
     $pathforcontroller = $pathForApp.$controller.".php";
-    echo $pathforcontroller;
+    //echo $pathforcontroller;
     if(file_exists($pathforcontroller)){
       include_once($pathforcontroller);
       if(class_exists($controller) ) {
