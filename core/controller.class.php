@@ -38,11 +38,6 @@ class controller implements controllerInterface{
   public function access($functionName, $me){
     //Create the access list for each function in this controller you can attribute a level of access
     $this->accessList = array("index" => "11");
-    $myLevel = $me->getLevel();
-    if($this->accessList[$functionName] > $myLevel) {
-      return true;
-    } else {
-      return false;
-    }
+    return true;
   }
 }

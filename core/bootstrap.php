@@ -1,21 +1,21 @@
 <?php
 session_start();
 // bootstrap.php
-require_once "/config/config.php";
+require_once "/config/configDB.php";
+require_once "/config/configFolders.php";
 require_once "errors.class.php";
+include_once('config/configApps.php');
 
-require_once "/core/me.php";
-if($_SERVER['SERVER_NAME'] == "firstapp.dev"){
-  $appname = "firstapp";
+$serverName = $_SERVER['SERVER_NAME'];
+foreach ($configApps as $app) {
+  if($app->url == $serverName){
+    define('APP_NAME', $app->name);
+    define('APP_FOLDER', $app->folder);
+  }
 }
-else if($_SERVER['SERVER_NAME'] == "secondapp.dev"){
-  $appname = "secondapp";
-}
-$_SESSION['APPNAME'] = "";
-$me = new me("10");
-$me->setLevel("10");
-if(file_exists("packages/autoload.php")){
-  require_once "packages/autoload.php";
+
+if(file_exists(PACKAGES_FOLDER."/autoload.php")){
+  require_once PACKAGES_FOLDER."/autoload.php";
 } else {
   error::set("Composer n&atilde;o encontrado</br></br>");
   error::set("Lista de Server packages a instalar:</br></br>");
@@ -26,16 +26,6 @@ if(file_exists("packages/autoload.php")){
     error::set("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
   }
   error::set("</br>Para editar a lista de server packages a instalar basta editar o ficheiro <b>composer.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
-  error::set("</br></br>Lista de Client packages a instalar:</br></br>");
-  $x = file_get_contents("automate.json");
-  $y = json_decode($x);
-  $z = $y->require;
-  foreach ($z as $name => $ver) {
-    error::set("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
-  }
-  error::set("</br>Para editar a lista de client packages a instalar basta editar o ficheiro <b>automate.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
-
-  error::set("</br>Para instalar automaticamente os pacotes em falta basta correr a partir da linha de comandos <b>php init.php</b></br>");
   exit;
 }
 
@@ -70,17 +60,15 @@ if (strpos($match['target'], '.') !== FALSE)
   $parts[0] = $match['target'];
   $parts[1] = "index";
 }
-//echo "<pre>";
-//print_r($match);
-//echo "</pre>";
+
 $controller = $parts[0];
 $function = $parts[1];
 require "controller.class.php";
 require "model.class.php";
 if($match['package'] == ""){
-  $pathForApp = "app/".$appname."";
+  $pathForApp = APP_FOLDER."/".APP_NAME."";
 } else {
-  $pathForApp = "packages/".$match['package']."";
+  $pathForApp = PACKAGES_FOLDER."/".$match['package']."";
 }
 
 
