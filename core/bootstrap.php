@@ -12,7 +12,7 @@ foreach ($configApps as $app) {
     define('APP_FOLDER', $app->folder);
   }
 }
-include_once 'packages/moonlight/client/client.php';
+include_once 'packages/moonlight/utils/utils.php';
 //$c = new client();
 //echo $c->getHeaderFiles();
 
@@ -33,7 +33,6 @@ if(file_exists(PACKAGES_FOLDER."/autoload.php")){
 include_once 'packages/moonlight/base/loadBase.php';
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
-
 
 $paths = array("\packages\moonlight\auth\models","\app\firstApp\models");
 $isDevMode = DEV_MODE;
@@ -81,7 +80,7 @@ if($match['package'] == ""){
         if(method_exists($c,$function)){
           $midleware = $match['midleware'];
           if(method_exists($c,$midleware)){
-            $midlewareVerification =$c->$midleware($function, $me);
+            $midlewareVerification =$c->$midleware($function, $_SESSION['user']);
             if($midlewareVerification){
               echo $c->$function($match['params']);
             } else {

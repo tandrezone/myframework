@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1911228a56102dda4d611277cffd6eab",
-    "content-hash": "fbf0812c20d0f09116086cc92d52a45a",
+    "hash": "f33c07a8f35004c972dfc699cff48f99",
+    "content-hash": "f2e128130c6f77d344900708f252e92e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -289,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa"
+                "reference": "df7aeeaa1fb31fc62f68687d5f1ec5fdbe5e80df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa",
-                "reference": "fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/df7aeeaa1fb31fc62f68687d5f1ec5fdbe5e80df",
+                "reference": "df7aeeaa1fb31fc62f68687d5f1ec5fdbe5e80df",
                 "shasum": ""
             },
             "require": {
@@ -352,7 +352,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-01-06 21:56:48"
+            "time": "2016-01-07 12:15:02"
         },
         {
             "name": "doctrine/inflector",
@@ -701,12 +701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tandrezone/auth.git",
-                "reference": "149a1661473d8f4b26f06edf971bd7dba2798d6a"
+                "reference": "308fd300d7c312946affbe47a4befcbe83c66ed0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tandrezone/auth/zipball/149a1661473d8f4b26f06edf971bd7dba2798d6a",
-                "reference": "149a1661473d8f4b26f06edf971bd7dba2798d6a",
+                "url": "https://api.github.com/repos/tandrezone/auth/zipball/308fd300d7c312946affbe47a4befcbe83c66ed0",
+                "reference": "308fd300d7c312946affbe47a4befcbe83c66ed0",
                 "shasum": ""
             },
             "require": {
@@ -731,7 +731,7 @@
                 "bd",
                 "moonlight"
             ],
-            "time": "2016-01-05 16:07:21"
+            "time": "2016-01-07 13:01:44"
         },
         {
             "name": "moonlight/automate",
@@ -853,6 +853,92 @@
             "time": "2016-01-07 11:20:22"
         },
         {
+            "name": "moonlight/client",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/client.git",
+                "reference": "98e2e0fda0dbf3c2b3cd0f35566e67fd7f0f50f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/client/zipball/98e2e0fda0dbf3c2b3cd0f35566e67fd7f0f50f8",
+                "reference": "98e2e0fda0dbf3c2b3cd0f35566e67fd7f0f50f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "client.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to client",
+            "homepage": "https://github.com/tandrezone/client",
+            "keywords": [
+                "bd",
+                "client",
+                "moonlight"
+            ],
+            "time": "2016-01-07 12:56:06"
+        },
+        {
+            "name": "moonlight/errors",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/errors.git",
+                "reference": "80192bc4b8592bc454a87b3a91143eaa16a4f397"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/errors/zipball/80192bc4b8592bc454a87b3a91143eaa16a4f397",
+                "reference": "80192bc4b8592bc454a87b3a91143eaa16a4f397",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "errors.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to routing",
+            "homepage": "https://github.com/tandrezone/errors",
+            "keywords": [
+                "bd",
+                "errors",
+                "moonlight"
+            ],
+            "time": "2016-01-07 12:56:37"
+        },
+        {
             "name": "moonlight/router",
             "version": "dev-master",
             "source": {
@@ -894,6 +980,49 @@
                 "moonlight"
             ],
             "time": "2016-01-07 11:14:56"
+        },
+        {
+            "name": "moonlight/utils",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/utils.git",
+                "reference": "6a4794dc271fd048a98d3558aa35139371f3085f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/utils/zipball/6a4794dc271fd048a98d3558aa35139371f3085f",
+                "reference": "6a4794dc271fd048a98d3558aa35139371f3085f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "utils.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to utils",
+            "homepage": "https://github.com/tandrezone/utils",
+            "keywords": [
+                "bd",
+                "moonlight",
+                "utils"
+            ],
+            "time": "2016-01-07 12:54:55"
         },
         {
             "name": "symfony/console",
@@ -1124,6 +1253,9 @@
         "moonlight/base": 20,
         "moonlight/auth": 20,
         "moonlight/backoffice": 20,
+        "moonlight/utils": 20,
+        "moonlight/client": 20,
+        "moonlight/errors": 20,
         "knplabs/packagist-api": 20
     },
     "prefer-stable": false,
