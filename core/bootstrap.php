@@ -4,6 +4,7 @@ session_start();
 require_once "/config/configDB.php";
 require_once "/config/configFolders.php";
 include_once('config/configApps.php');
+include_once '/config/configAccessViews.php';
 
 $serverName = $_SERVER['SERVER_NAME'];
 foreach ($configApps as $app) {
