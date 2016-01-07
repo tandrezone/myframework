@@ -18,4 +18,4 @@ router::run('/app/'.APP_NAME.'/routing.php','', $router);
 // if you need to access stuff from another app then that stuff is aproved to be a package
 // in the app i canot access another apps
 // in the app i have full access to packages
-router::runpackage('moonlight/auth','auth',$router);
+router::runpackage('moonlight/auth','',$router);

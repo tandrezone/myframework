@@ -1,9 +1,8 @@
 <?php
 session_start();
-// bootstrap.php
+
 require_once "/config/configDB.php";
 require_once "/config/configFolders.php";
-require_once "errors.class.php";
 include_once('config/configApps.php');
 
 $serverName = $_SERVER['SERVER_NAME'];
@@ -13,23 +12,25 @@ foreach ($configApps as $app) {
     define('APP_FOLDER', $app->folder);
   }
 }
+include_once 'packages/moonlight/client/client.php';
+//$c = new client();
+//echo $c->getHeaderFiles();
 
 if(file_exists(PACKAGES_FOLDER."/autoload.php")){
   require_once PACKAGES_FOLDER."/autoload.php";
 } else {
-  error::set("Composer n&atilde;o encontrado</br></br>");
-  error::set("Lista de Server packages a instalar:</br></br>");
+  print_r("Composer n&atilde;o encontrado</br></br>");
+  print_r("Lista de Server packages a instalar:</br></br>");
   $x = file_get_contents("composer.json");
   $y = json_decode($x);
   $z = $y->require;
   foreach ($z as $name => $ver) {
-    error::set("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
+    print_r("Name: <b>".$name."</b> version: <b>".$ver."</b></br>");
   }
-  error::set("</br>Para editar a lista de server packages a instalar basta editar o ficheiro <b>composer.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
+  print_r("</br>Para editar a lista de server packages a instalar basta editar o ficheiro <b>composer.json</b> adicionando ou retirando pacotes na entrada <b>require</b></br>");
   exit;
 }
-
-
+include_once 'packages/moonlight/base/loadBase.php';
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
@@ -48,7 +49,7 @@ $dbParams = array(
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 $entityManager = EntityManager::create($dbParams, $config);
 
-$router = new Router();
+$router = new router();
 include_once(ROUTEBASE);
 
 
@@ -88,14 +89,14 @@ if($match['package'] == ""){
             }
           }
         } else {
-          error::set("Metodo <b>".$function. "</b> n&atilde;o existe, deve ser criado dentro da classe <b>".$controller."</b>");
+          print_r("Metodo <b>".$function. "</b> n&atilde;o existe, deve ser criado dentro da classe <b>".$controller."</b>");
         }
       } else{
-        error::set("Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php");
+        print_r("Classe do controlador ".$controller." n&atilde;o existe deve ser criada dentro do ficheiro ".$controller.".php");
       }
     } else {
-      error::set("Ficheiro de controlador ".$controller." n&atilde;o existe por favor criar o ficheiro e colocar em /applications/controllers");
+      print_r("Ficheiro de controlador ".$controller." n&atilde;o existe por favor criar o ficheiro e colocar em /applications/controllers");
     }
   } else {
-    error::set("ROUTE nao existe");
+  print_r("ROUTE nao existe");
   }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "abbc5adae9f60c100becf10349631871",
-    "content-hash": "879eb6a37537b5420f40013afd21e31c",
+    "hash": "1911228a56102dda4d611277cffd6eab",
+    "content-hash": "fbf0812c20d0f09116086cc92d52a45a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -289,12 +289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "93d46e7cb48fb271376aebb17d9eec8813a81e03"
+                "reference": "fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/93d46e7cb48fb271376aebb17d9eec8813a81e03",
-                "reference": "93d46e7cb48fb271376aebb17d9eec8813a81e03",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa",
+                "reference": "fbd6ab259240880e3a2bb2dc8e6f0c1a89521cfa",
                 "shasum": ""
             },
             "require": {
@@ -352,7 +352,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-12-31 13:45:04"
+            "time": "2016-01-06 21:56:48"
         },
         {
             "name": "doctrine/inflector",
@@ -739,12 +739,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tandrezone/automate.git",
-                "reference": "778d34776e0b59226e5c9b1f806af08b6ffff94d"
+                "reference": "aecd35d9885abe283b4cf322f59fd822bd3415be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tandrezone/automate/zipball/778d34776e0b59226e5c9b1f806af08b6ffff94d",
-                "reference": "778d34776e0b59226e5c9b1f806af08b6ffff94d",
+                "url": "https://api.github.com/repos/tandrezone/automate/zipball/aecd35d9885abe283b4cf322f59fd822bd3415be",
+                "reference": "aecd35d9885abe283b4cf322f59fd822bd3415be",
                 "shasum": ""
             },
             "require": {
@@ -769,7 +769,7 @@
                 "bd",
                 "moonlight"
             ],
-            "time": "2015-12-28 16:52:43"
+            "time": "2015-12-28 18:01:10"
         },
         {
             "name": "moonlight/backoffice",
@@ -810,17 +810,60 @@
             "time": "2016-01-05 16:07:31"
         },
         {
+            "name": "moonlight/base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tandrezone/base.git",
+                "reference": "be64dfac2593498282860315f29fd9782b1a0a4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tandrezone/base/zipball/be64dfac2593498282860315f29fd9782b1a0a4d",
+                "reference": "be64dfac2593498282860315f29fd9782b1a0a4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "loadBase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tiago Andre",
+                    "email": "tandrezone@gmail.com",
+                    "homepage": "https://github.com/tandrezone"
+                }
+            ],
+            "description": "Package to base",
+            "homepage": "https://github.com/tandrezone/base",
+            "keywords": [
+                "base",
+                "bd",
+                "moonlight"
+            ],
+            "time": "2016-01-07 11:20:22"
+        },
+        {
             "name": "moonlight/router",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tandrezone/router.git",
-                "reference": "04c15ca2c0217124952d9f22de39a9f7f986ab3d"
+                "reference": "60b2620b0594aebcf42b563538827c0c8b81ee85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tandrezone/router/zipball/04c15ca2c0217124952d9f22de39a9f7f986ab3d",
-                "reference": "04c15ca2c0217124952d9f22de39a9f7f986ab3d",
+                "url": "https://api.github.com/repos/tandrezone/router/zipball/60b2620b0594aebcf42b563538827c0c8b81ee85",
+                "reference": "60b2620b0594aebcf42b563538827c0c8b81ee85",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +893,7 @@
                 "bdados",
                 "moonlight"
             ],
-            "time": "2016-01-04 16:45:54"
+            "time": "2016-01-07 11:14:56"
         },
         {
             "name": "symfony/console",
@@ -858,12 +901,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa"
+                "reference": "441e34136188e3e04b1a7d652b5ff1e1b35d114a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa",
-                "reference": "8bf0b5fdfb963ee81a9e5f9c957b75180a6447aa",
+                "url": "https://api.github.com/repos/symfony/console/zipball/441e34136188e3e04b1a7d652b5ff1e1b35d114a",
+                "reference": "441e34136188e3e04b1a7d652b5ff1e1b35d114a",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +953,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-03 15:33:41"
+            "time": "2016-01-06 09:59:23"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1078,6 +1121,7 @@
     "stability-flags": {
         "moonlight/router": 20,
         "moonlight/automate": 20,
+        "moonlight/base": 20,
         "moonlight/auth": 20,
         "moonlight/backoffice": 20,
         "knplabs/packagist-api": 20

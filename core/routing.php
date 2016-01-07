@@ -1,6 +1,0 @@
-<?php
-//DEBUG Mode
-
-
-
-	?>
