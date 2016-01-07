@@ -63,8 +63,6 @@ if (strpos($match['target'], '.') !== FALSE)
 
 $controller = $parts[0];
 $function = $parts[1];
-require "controller.class.php";
-require "model.class.php";
 if($match['package'] == ""){
   $pathForApp = APP_FOLDER."/".APP_NAME."";
 } else {

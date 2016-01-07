@@ -6,6 +6,7 @@
          "doctrine/orm": "2.4.*",
          "moonlight/router": "dev-master",
          "moonlight/automate": "dev-master",
+         "moonlight/base" : "dev-master",
           "moonlight/auth": "dev-master",
           "moonlight/backoffice": "dev-master",
          "knplabs/packagist-api" : "dev-master",
