@@ -19,3 +19,4 @@ router::run('/app/'.APP_NAME.'/routing.php','', $router);
 // in the app i canot access another apps
 // in the app i have full access to packages
 router::runpackage('moonlight/auth','',$router);
+router::runpackage('moonlight/backoffice','bo',$router);
