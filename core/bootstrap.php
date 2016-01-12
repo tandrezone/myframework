@@ -1,11 +1,13 @@
 <?php
 session_start();
 
+//Load Config Files
 require_once "/config/configDB.php";
 require_once "/config/configFolders.php";
 include_once('config/configApps.php');
 include_once '/config/configAccessViews.php';
 
+//Load app
 $serverName = $_SERVER['SERVER_NAME'];
 foreach ($configApps as $app) {
   if($app->url == $serverName){
@@ -13,12 +15,13 @@ foreach ($configApps as $app) {
     define('APP_FOLDER', $app->folder);
   }
 }
+if(APP_NAME == "APP_NAME"){
+  echo "APP not defined please add this app in the conf file in config/configApps.php";
+  exit;
+}
 if(file_exists('packages/moonlight/utils/utils.php')){
   include_once 'packages/moonlight/utils/utils.php';
 }
-
-//$c = new client();
-//echo $c->getHeaderFiles();
 
 if(file_exists(PACKAGES_FOLDER."/autoload.php")){
   require_once PACKAGES_FOLDER."/autoload.php";
