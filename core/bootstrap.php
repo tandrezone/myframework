@@ -13,7 +13,10 @@ foreach ($configApps as $app) {
     define('APP_FOLDER', $app->folder);
   }
 }
-include_once 'packages/moonlight/utils/utils.php';
+if(file_exists('packages/moonlight/utils/utils.php')){
+  include_once 'packages/moonlight/utils/utils.php';
+}
+
 //$c = new client();
 //echo $c->getHeaderFiles();
 
