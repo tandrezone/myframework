@@ -5,7 +5,8 @@
  */
 $intRoute = function($router,$prefix){
   $router->addRoutes(array(
-    array('GET','/'.$prefix, 'start.index')
+    array('GET','/', 'start.index'),
+    array('GET','/nome/[a:nome]', 'start.ari')
   ));
   //routerIntern::runpackage('moonlight/backoffice','backoffice',$router);
 
